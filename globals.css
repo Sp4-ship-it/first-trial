@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 33 33% 97%;
+    --foreground: 24 60% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 24 60% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 24 60% 20%;
+    --primary: 24 60% 31%;
+    --primary-foreground: 33 33% 97%;
+    --secondary: 341 81% 72%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 33 30% 94%;
+    --muted-foreground: 24 15% 45%;
+    --accent: 341 81% 72%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 25% 88%;
+    --input: 30 25% 88%;
+    --ring: 24 60% 31%;
+    --chart-1: 24 60% 31%;
+    --chart-2: 341 81% 72%;
+    --chart-3: 33 49% 65%;
+    --chart-4: 12 76% 61%;
+    --chart-5: 173 58% 39%;
+    --radius: 0.75rem;
+  }
+  .dark {
+    --background: 24 30% 10%;
+    --foreground: 33 33% 90%;
+    --card: 24 30% 14%;
+    --card-foreground: 33 33% 90%;
+    --popover: 24 30% 14%;
+    --popover-foreground: 33 33% 90%;
+    --primary: 33 49% 65%;
+    --primary-foreground: 24 30% 10%;
+    --secondary: 341 81% 72%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 24 20% 20%;
+    --muted-foreground: 33 20% 65%;
+    --accent: 341 81% 72%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 24 20% 25%;
+    --input: 24 20% 25%;
+    --ring: 33 49% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-shadow-lg {
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  }
+  .text-shadow-md {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  }
+  .cake-pattern {
+    background-image: radial-gradient(circle at 20% 50%, rgba(255, 107, 138, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(212, 165, 116, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(139, 69, 19, 0.04) 0%, transparent 50%);
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .shimmer-bg {
+    background: linear-gradient(110deg, transparent 30%, rgba(212, 165, 116, 0.3) 50%, transparent 70%);
+    background-size: 200% 100%;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(33 33% 97%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(24 60% 31% / 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(24 60% 31% / 0.6);
+}
